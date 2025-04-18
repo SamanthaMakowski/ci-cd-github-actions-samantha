@@ -19,7 +19,9 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd client   # or change 'client' to the correct folder where package.json is
+          npm install
 
       - name: Run Cypress tests
         uses: cypress-io/github-action@v5
